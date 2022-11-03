@@ -1,23 +1,29 @@
 ﻿using System;
-public class PalindromeExample
+namespace FactorsOfNumbers
 {
-    public static void Main(string[] args)
+    using System;
+    namespace FactorsOfNumber
     {
-        int n, r, sum = 0, temp;
-        Console.Write("Enter the Number: ");
-        n = int.Parse(Console.ReadLine());
-        temp = n;
-        while (n > 0)
+        class ApplicationOne
         {
-            r = n % 10;
-            sum = (sum * 10) + r;
-            n = n / 10;
+            static void Main(string[] args)
+            {
+                int n, i;
+                Console.WriteLine("Enter the Number:");
+                n = int.Parse(Console.ReadLine());
+                Console.WriteLine("Factors:");
+                for (i = 1; i <= n; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+                Console.ReadLine();
+            }
         }
-        if (temp == sum)
-            Console.Write("Number is Palindrome.");
-        else
-            Console.Write("Number is not Palindrome");
     }
+
 }
 
 
