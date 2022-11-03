@@ -1,29 +1,17 @@
 ﻿using System;
-namespace FactorsOfNumbers
+public class Factorial
 {
-    using System;
-    namespace FactorsOfNumber
+    public static void Main(string[] args)
     {
-        class ApplicationOne
+        int i, fact = 1, number;
+        Console.Write("Enter any Number: ");
+        number = int.Parse(Console.ReadLine());
+        for (i = 1; i <= number; i++)
         {
-            static void Main(string[] args)
-            {
-                int n, i;
-                Console.WriteLine("Enter the Number:");
-                n = int.Parse(Console.ReadLine());
-                Console.WriteLine("Factors:");
-                for (i = 1; i <= n; i++)
-                {
-                    if (n % i == 0)
-                    {
-                        Console.WriteLine(i);
-                    }
-                }
-                Console.ReadLine();
-            }
+            fact = fact * i;
         }
+        Console.Write("Factorial of " + number + " is: " + fact);
     }
-
 }
 
 
