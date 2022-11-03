@@ -1,20 +1,23 @@
 ﻿using System;
-
-public class ReverseNumber
+public class PalindromeExample
 {
-
     public static void Main(string[] args)
     {
-        int n, reverse = 0, rem;
-        Console.Write("Enter a number: ");
+        int n, r, sum = 0, temp;
+        Console.Write("Enter the Number: ");
         n = int.Parse(Console.ReadLine());
-        while (n != 0)
+        temp = n;
+        while (n > 0)
         {
-            rem = n % 10;
-            reverse = reverse * 10 + rem;
-            n /= 10;
+            r = n % 10;
+            sum = (sum * 10) + r;
+            n = n / 10;
         }
-        Console.Write("Reversed Number: " + reverse);
+        if (temp == sum)
+            Console.Write("Number is Palindrome.");
+        else
+            Console.Write("Number is not Palindrome");
     }
 }
+
 
