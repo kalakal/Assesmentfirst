@@ -1,16 +1,20 @@
 ﻿using System;
-public class Factorial
+
+public class FibonacciSeries
 {
     public static void Main(string[] args)
     {
-        int i, fact = 1, number;
-        Console.Write("Enter any Number: ");
+        int n1 = 0, n2 = 1, n3, i, number;
+        Console.Write("Enter the number of elements: ");
         number = int.Parse(Console.ReadLine());
-        for (i = 1; i <= number; i++)
+        Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
+        for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
         {
-            fact = fact * i;
+            n3 = n1 + n2;
+            Console.Write(n3 + " ");
+            n1 = n2;
+            n2 = n3;
         }
-        Console.Write("Factorial of " + number + " is: " + fact);
     }
 }
 
